@@ -4,6 +4,11 @@ var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var jade        = require('gulp-jade');
+var browserify  = require('gulp-browserify');
+var uglify      = require('gulp-uglify');
+var gulpif      = require('gulp-if');
+
+var env = process.env.NODE_ENV || 'development';
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -57,10 +62,22 @@ gulp.task('sass', function () {
  * jade
  */
  gulp.task('jade', function() {
-   return gulp.src('_jadefiles/*.jade')
+   return gulp.src('_jadefiles/**/*.jade')
      .pipe(jade())
      .pipe(gulp.dest('_includes'));
  });
+
+ /**
+  * js
+  */
+  gulp.task('js', function() {
+    return gulp.src('assets/js/javascripts/main.js')
+      .pipe(browserify({ debug: env === 'development' }))
+      .pipe(gulpif(env === 'production', uglify()))
+      .pipe(gulp.dest('assets/js'));
+  });
+
+
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
@@ -69,10 +86,11 @@ gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
     gulp.watch(['*.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
     gulp.watch(['_jadefiles/*.jade'], ['jade']);
+    gulp.watch(['assets/js/javascripts/main.js'], ['js']);
 });
 
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'watch', 'js']);
