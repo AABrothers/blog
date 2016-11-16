@@ -23,7 +23,7 @@
       max-width: 163px
       // height: 170px
       // width: 185px
-      // margin: 10px 0
+      margin: 10px 0
       padding: 0
       background:
         image: url(/assets/img/logo-AABrothers.svg)
@@ -31,29 +31,32 @@
         position: center
         // it means it will grows to be as tall or as wide as it can, which ever comes first
         size: contain
-        // color: white
+        // color: red
 
     .site-nav
       // display: flex
       // flex-direction: column
       // justify-content: center
-      background: fuchsia
-      // background: white
+      // background: fuchsia
+      background: white
       ul
         list-style: none
-        margin: 80px 0
+        margin: 60px 0
         padding: 0
         // text-align: right
         display: flex
         // justify-content: space-around
         // flex-direction: row
-        background: lightgreen
-        // background: white
+        // background: lightgreen
+        background: white
         li
+          font-size: 18px
           margin-right: 30px
 
           &:last-child
             margin-right: 0px
+          a
+            color: #1b4e79
 
     .mobile-nav-toggle
       display: none

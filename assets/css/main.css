@@ -622,25 +622,29 @@ hr {
     text-indent: 101%;
     white-space: nowrap;
     max-width: 163px;
+    margin: 10px 0;
     padding: 0;
     background-image: url(/assets/img/logo-AABrothers.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; }
   .home-wrap header .site-nav {
-    background: fuchsia; }
+    background: white; }
     .home-wrap header .site-nav ul {
       list-style: none;
-      margin: 80px 0;
+      margin: 60px 0;
       padding: 0;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      background: lightgreen; }
+      background: white; }
       .home-wrap header .site-nav ul li {
+        font-size: 18px;
         margin-right: 30px; }
         .home-wrap header .site-nav ul li:last-child {
           margin-right: 0px; }
+        .home-wrap header .site-nav ul li a {
+          color: #1b4e79; }
   .home-wrap header .mobile-nav-toggle {
     display: none;
     width: 50px;
@@ -722,6 +726,83 @@ hr {
     -webkit-transform: translateY(0%);
             transform: translateY(0%); } }
 
+section.about {
+  background-image: url(/assets/img/about-bg01.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover; }
+  section.about h2 {
+    color: #cfeff6;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1;
+    padding-top: 300px;
+    margin-left: -100px; }
+  section.about .home-lead {
+    color: #97dfff;
+    margin-left: -100px;
+    margin-right: -350px; }
+
+@media (max-width: 640px) {
+  section.about h2, section.about .home-lead {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px; } }
+
 @media (max-width: 775px) {
   .home-wrap {
     display: block; } }
+
+.home-sections {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+  .home-sections section {
+    padding: 50px 0; }
+  .home-sections .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: rows;
+            flex-direction: rows; }
+  .home-sections .flex--center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .home-sections .flex--space-around {
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  .home-sections .order-first {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1; }
+
+.col-1 {
+  max-width: 300px;
+  margin: 0 10px; }
+
+.col-2 {
+  max-width: 620px;
+  margin: 0 10px; }
+
+.col-50 {
+  width: 50%; }
+
+.push-left {
+  margin-right: 330px; }
+
+@media (max-width: 640px) {
+  .home-sections .flex {
+    display: block; }
+  .col-1 {
+    max-width: 100%; }
+  .col-50 {
+    width: auto; }
+  .push-left {
+    margin-right: 10px; } }
+
+.home-lead {
+  font-size: 36px;
+  line-height: 1.1; }

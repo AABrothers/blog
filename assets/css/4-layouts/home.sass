@@ -1,0 +1,70 @@
+.home-wrap
+  // display: flex
+  // min-height: 100vh
+
+  @media (max-width: 775px)
+    display: block
+
+.home-sections
+  flex: 1
+
+  section
+    padding: 50px 0
+
+  // Flex Classes
+  .flex
+    display: flex
+    flex-direction: rows
+
+  .flex--center
+    justify-content: center
+
+  .flex--space-around
+    justify-content: space-around
+
+  .order-first
+    order: -1
+
+// columns
+.col-1
+  max-width: 300px
+  margin: 0 10px
+  // background: #FF7E3E
+
+.col-2
+  max-width: 620px
+  margin: 0 10px
+  // background: #23c692
+
+.col-50
+  width: 50%
+  // background: #ffc000
+
+// .push-right
+//   margin-left: 330px
+
+.push-left
+  margin-right: 330px
+
+
+@media (max-width: 640px)
+  .home-sections .flex
+    display: block
+
+  .col-1
+    max-width: 100%
+
+  .col-50
+    width: auto
+
+  .push-left
+    margin-right: 10px
+
+
+// Typography
+
+.home-lead
+  font:
+    size: 36px
+    // weight: 400
+  line-height: 1.1
