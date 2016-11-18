@@ -1,9 +1,10 @@
 section.about
+  // height: 540px
   background:
-    image: url(/assets/img/about-bg01.png)
+    image: url(/assets/img/about-bg.png)
     repeat: no-repeat
     // position: center bottom
-    position: center top
+    position: center
     // it means it will grows to be as tall or as wide as it can, which ever comes first
     size: cover
 
@@ -13,21 +14,28 @@ section.about
       size: 72px
       weight: 400
     line-height: 1
-    padding-top: 300px
+    // padding-top: 350px
     // margin-top: 0
     margin-left: -100px
+    margin-top: 380px
+    margin-bottom: 0px
     // background: #23c692
+    text-shadow: 0px 4px 8px rgba(0,0,0,0.4)
 
-  .home-lead
+
+  .home-header
     color: #97dfff
     margin-left: -100px
     margin-right: -350px
-    // padding-bottom: 100px
+    margin-top: 0px
+    margin-bottom: 50px
+    // line-height: 2
     // background: #23c692
+    text-shadow: 0px 4px 8px rgba(0,0,0,0.4)
 
 @media (max-width: 640px)
   section.about
-    h2, .home-lead
+    h2, .home-header
       margin-left: auto
       margin-right: auto
       max-width: 300px

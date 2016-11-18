@@ -609,6 +609,19 @@ hr {
   border-top: 0;
   margin: 1.5em 0; }
 
+.home-cta {
+  font-size: 28px;
+  display: block;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 0.4em 0;
+  line-height: 1.25;
+  -webkit-transition: all 0.15s ease-in-out;
+          transition: all 0.15s ease-in-out; }
+  .home-cta:hover {
+    box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.4); }
+
 .home-wrap header {
   background: white; }
   .home-wrap header .header-position {
@@ -727,27 +740,174 @@ hr {
             transform: translateY(0%); } }
 
 section.about {
-  background-image: url(/assets/img/about-bg01.png);
+  background-image: url(/assets/img/about-bg.png);
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
   background-size: cover; }
   section.about h2 {
     color: #cfeff6;
     font-size: 72px;
     font-weight: 400;
     line-height: 1;
-    padding-top: 300px;
-    margin-left: -100px; }
-  section.about .home-lead {
+    margin-left: -100px;
+    margin-top: 380px;
+    margin-bottom: 0px;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); }
+  section.about .home-header {
     color: #97dfff;
     margin-left: -100px;
-    margin-right: -350px; }
+    margin-right: -350px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); }
 
 @media (max-width: 640px) {
-  section.about h2, section.about .home-lead {
+  section.about h2, section.about .home-header {
     margin-left: auto;
     margin-right: auto;
     max-width: 300px; } }
+
+section.who-we-are {
+  background-image: url(/assets/img/who-we-are-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #34567b; }
+  section.who-we-are .home-header, section.who-we-are .home-body {
+    margin-left: -200px;
+    margin-right: -350px; }
+  section.who-we-are .home-header {
+    margin-top: 50px;
+    margin-bottom: 50px; }
+  section.who-we-are .home-body {
+    text-align: justify;
+    margin-bottom: 50px; }
+
+@media (max-width: 640px) {
+  section.who-we-are h1, section.who-we-are .home-header, section.who-we-are .home-body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    text-align: justify; } }
+
+section.services {
+  background-image: url(/assets/img/services-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  section.services .home-header, section.services .home-body, section.services .home-body-sm {
+    margin-left: -200px;
+    margin-right: -350px; }
+  section.services .home-header {
+    color: #c3e6ef;
+    margin-top: 50px;
+    margin-bottom: 50px; }
+  section.services .home-body {
+    color: #f2cf52;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 50px; }
+  section.services .home-body-sm {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: #94afb5; }
+    section.services .home-body-sm:last-child {
+      margin-bottom: 50px; }
+
+@media (max-width: 640px) {
+  section.services h1, section.services .home-header,
+  section.services .home-body, section.services .home-body-sm {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px; }
+  section.services .home-body-sm {
+    text-align: justify; } }
+
+section.who-we-are {
+  background-image: url(/assets/img/why-choose-us-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #34567b; }
+  section.who-we-are .home-header, section.who-we-are ul {
+    margin-left: -200px;
+    margin-right: -350px; }
+  section.who-we-are .home-header {
+    margin-top: 50px;
+    margin-bottom: 50px; }
+  section.who-we-are ul {
+    list-style: square; }
+    section.who-we-are ul li {
+      font-size: 24px; }
+      section.who-we-are ul li:last-child {
+        margin-bottom: 50px; }
+
+@media (max-width: 640px) {
+  section.who-we-are h1, section.who-we-are .home-header, section.who-we-are ul {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    text-align: justify; } }
+
+section.our-team {
+  background-image: url(/assets/img/our-team-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #c3e6ef; }
+  section.our-team .home-header, section.our-team .home-body {
+    margin-left: -200px;
+    margin-right: -350px; }
+  section.our-team .home-header {
+    margin-top: 50px;
+    margin-bottom: 50px; }
+  section.our-team .home-body {
+    text-align: justify;
+    margin-bottom: 50px; }
+
+@media (max-width: 640px) {
+  section.our-team h1, section.our-team .home-header, section.our-team .home-body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    text-align: justify; } }
+
+section.contact-us {
+  height: 1130px;
+  background-image: url(/assets/img/contact-us-bg.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover; }
+  section.contact-us .opacity-pg, section.contact-us .col-2 {
+    display: block;
+    background: white; }
+
+section.footer {
+  height: 400px;
+  background-image: url(/assets/img/footer-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  section.footer .home-body-sm {
+    margin-left: -200px;
+    margin-right: -350px;
+    margin-top: 150px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: #94afb5; }
+    section.footer .home-body-sm:last-child {
+      margin-bottom: 100px;
+      margin-top: 0px; }
+
+@media (max-width: 640px) {
+  section.footer .home-body-sm {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    text-align: justify;
+    margin-top: 50px;
+    margin-bottom: 50px; } }
 
 @media (max-width: 775px) {
   .home-wrap {
@@ -803,6 +963,15 @@ section.about {
   .push-left {
     margin-right: 10px; } }
 
-.home-lead {
+.home-header {
   font-size: 36px;
+  font-weight: 400;
   line-height: 1.1; }
+
+.home-body {
+  font-size: 24px;
+  line-height: 1.5; }
+
+.home-body-sm {
+  font-size: 18px;
+  line-height: 1.5; }
